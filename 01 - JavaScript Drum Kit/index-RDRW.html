@@ -80,12 +80,10 @@
       return;
     }
 
-    // FIXME: for some reason the playing class is not present in the classList,
-    // so it is not removed from classList but the effect is still visible on the screen
     this.classList.remove('playing');
   }
 
-  const keys = document.querySelectorAll('.keys');
+  const keys = document.querySelectorAll('.key');
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
   window.addEventListener('keydown', playSound);
 </script>
